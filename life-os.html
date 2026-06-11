@@ -189,7 +189,7 @@ function App(){
   const[trainWk,setTrainWk]=useState(load("train_wk",1));
   const[saved,setSaved]=useState(false);
   const[habits,setHabits]=useState(load(`h_${today()}`,{}));
-  const[pLog,setPLog]=useState(load(`p_${today()}`,[]);
+  const[pLog,setPLog]=useState(load(`p_${today()}`,[]));
 
   useEffect(()=>{store(`h_${today()}`,habits);},[habits]);
   useEffect(()=>{store(`p_${today()}`,pLog);},[pLog]);
